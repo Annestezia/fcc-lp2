@@ -3,7 +3,10 @@
 :root {
   --dark: #484441;
   --nice-green: #83d94f;
+  --nav-height:56px;
+  --green-for-logo:#4CAF50;
 }
+
 /* ==========Helper classes======================= */
 .hidden {
   visibility: hiden;
@@ -57,13 +60,13 @@ section h2 {
 
 /* ====================Intro els for sections================= */
 .intro {
-  margin: 40px auto;
-  max-width: 50vw;
-  min-width: 320px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 20px;
+  /* margin: 40px auto; */
+  /* max-width: 50vw; */
+  /* min-width: 320px; */
+  /* border: 1px solid #bbb; */
+  /* border-radius: 5px; */
+  /* background-color: #fff; */
+  /* padding: 20px; */
   font-size: 1.3em;
   text-align: justify;
 
@@ -72,7 +75,7 @@ section h2 {
 /* =============================Header\Nav========================= */
 #nav-bar {
   display: flex;
-  height : 56px;
+  height : var(--nav-height);
   flex: 1 1 320px;
 }
 #nav-bar:after {
@@ -94,6 +97,10 @@ section h2 {
   border-bottom: 1px solid #999;
   font-size: 1.8em;
   line-height: 56px;
+}
+#logo span{
+  color:#fff;
+  
 }
 
 
@@ -130,10 +137,32 @@ section h2 {
 
 /*======================= info ======================*/
 #info {
-  padding-top: 100px;
-  text-align: center;
+  display: grid;
+  margin: auto;
+  max-width: 80%;
+  padding-top: var(--nav-height);
+  grid-template-areas: 'heading heading'
+                       'info-text info-video';
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
 }
+.section-heading{
+  grid-area: heading;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / 4;
+  place-self: center;
+}
+#info .intro{
+  grid-area: info-text;
+  max-width: 50vw;
+  min-width: 320px;
 
+}
+#video{
+  grid-area: info-video;
+  justify-self: center;
+}
 /* ==================Donate=========================== */
 #donate {
   padding-bottom: 30px;
@@ -227,10 +256,27 @@ footer {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  #info {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'heading'
+        'info-text'
+        ' info-video';
+
+  }
+  #video {
+  justify-self: center;}
+}
+
+#info .intro{
+      max-width: none;
+     min-width: none;
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+
+  
   .nav-text {
     display: none;
   }
