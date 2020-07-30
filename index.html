@@ -74,13 +74,16 @@
     </form>
   </div>
 </section>
-<section id="subscribe" class="anchor">
-  <h2>Subscribe to our newsletters</h2>
-  <p class="intro"> Stay  in  touch not to miss our news, announcements, and more</p>  
-     <form action="https://www.freecodecamp.com/email-submit" method="post" id="form">
-<label for="email" id="email-label">Email: <input type="email" placeholder="Your email" id="email" name ="email">
-  <input type="submit" id="submit" value ="Subscribe" class="btn"></label>
-</form>   
+<section id="subscribe" class="subscribe wow bounceInUp">
+  <a class="anchor" id="a-subscribe"></a>
+  <h2 class="subscribe__section-heading section-heading">Subscribe to Our Newsletters</h2>
+  <p class="subscribe__intro intro"> Stay in touch to be the fist to know about our new stuff and very special offers</p>
+  <form action="https://www.freecodecamp.com/email-submit" method="post" class="subscribe-form subscribe" id="form">
+    <div class="subsribe-form__inner-wrapper">
+      <input type="email" aria-label="Email" placeholder="Your email" id="email" class="subsribe-form__input subsribe-form__input--email" name="email" />
+      <input type="submit" id="submit" class="subscribe-form__btn btn" value="Subscribe">
+    </div>
+  </form>
 </section>
 <footer>&copy; EcoSquad 2019</footer>
 
