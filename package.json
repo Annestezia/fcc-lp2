@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Annestezia/fcc-lp2#readme",
   "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "node-sass": "npm:dart-sass@^1.25.0",
     "node-sass-install": "^1.0.2"
   }
 }
